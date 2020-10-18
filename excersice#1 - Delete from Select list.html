@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Remove from list</title>
+    <style>
+             #start {
+            border:1px solid black;
+            margin: 10px;
+            padding: 20px;
+
+        }
+        select {
+            width: 200px;
+            height: 20px;
+        }
+    </style>
+<body>
+
+<h3>Press on button to Remove</h3>
+
+
+<div id="start">
+  <select name="font_family" id="lists">
+        <option selected id="ford">Ford</option>
+        <option id="bnz">Merceds Benz</option>
+        <option id="bmw">BMW</option>
+        <option id="chevy">Chevrolate</option>
+        <option id="volvo">Volvo</option>
+        <option id="honda">Honda</option>
+        <option id="hundai">Hundai</option>
+        <option id="nissan">Nissan</option>
+    </select>
+    
+<button onclick="myFunction()">Remove from options</button>
+
+
+</div>
+<p id="love" style="border: 1px solid black ; border-radius: 20px; width:300px; margin:10px; padding: 2px; text-align: center; background-color: wheat;">Made In Love By: <span style="font-size:200%;color:red;">&hearts;</span> Laith Zayed</p>
+
+
+<script>
+
+
+function myFunction() {
+  var myobj = document.getElementById("ford");
+  myobj.remove();
+}
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <title>Excersie #2 - Change Random Image</title>
+        <style>
+            img {
+              width: 300px;
+              height: 300px;
+              border: 5px solid black;
+              border-radius: 20%;
+              box-shadow: 50px 50px whitesmoke;
+              margin: 50px;
+            }
+            button {
+                width: 300px;
+                height: 40px;
+                font-size: 14px;
+                margin-top: 10px;
+                margin-bottom: 30px;
+                margin-left: 70px;
+            }
+            #love {
+                border: 1px solid black;
+                width: 470px;
+
+            }
+            </style>
+        </head>
+   
+  <body>
+    <div id="love">
+        <div>
+          <img id="myimage" src="https://media.wired.com/photos/5d0959f2b887269593f655c1/master/w_1600%2Cc_limit/Transpo_Genesis_Inline1.jpg">
+        </div>
+        <div>
+          <button type="button" onclick="changeImage()">Press Here to Change Image</button>
+        </div>
+    </div>
+        <div>
+          <p id="love" style="border: 1px solid black ; border-radius: 20px; width:20%; margin:10px; margin-left: 60px; padding: 2px; text-align: center; background-color: wheat;">Made In Love By: <span style="font-size:200%;color:red;">&hearts;</span> Laith Zayed</p>
+        </div>
+        </body>
+
+<script>
+
+
+    var x= document.getElementById('myimage');
+    var images = [
+        'https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fcom.ft.imagepublish.upp-prod-us.s3.amazonaws.com%2Fa4e8f394-313b-11ea-a329-0bcf87a328f2?fit=scale-down&source=next&width=700',
+        'https://specials-images.forbesimg.com/imageserve/5d35eacaf1176b0008974b54/960x0.jpg?cropX1=790&cropX2=5350&cropY1=784&cropY2=3349',
+        'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bugatti-chiron-pur-sport-112-1582836609.jpg?crop=0.926xw:0.695xh;0,0.111xh&resize=640:*',
+        'https://media.wired.com/photos/5d0959f2b887269593f655c1/master/w_1600%2Cc_limit/Transpo_Genesis_Inline1.jpg'
+        ]
+       
+
+        function changeImage() {
+            var myRandomNum = Math.floor(Math.random()*images.length);
+             
+            x.src=images[myRandomNum];
+
+        }
+
+ </script>
+
+
+</html>
